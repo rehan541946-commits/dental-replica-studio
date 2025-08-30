@@ -33,7 +33,7 @@ const navigation = [
       { name: "Islamabad Clinic", href: "/dental-clinic-islamabad" },
     ]
   },
-  { name: "Services & Packages", href: "/dental-services-and-packages" },
+  { name: "Services and Packagess", href: "/dental-services-and-packages" },
   { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "/contact-us" },
 ];
