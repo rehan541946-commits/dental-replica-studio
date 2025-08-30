@@ -2,73 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dental Land Design System - Professional Healthcare Design */
+/* Modern Dental Clinic Design System - Premium Healthcare */
 
 @layer base {
   :root {
     /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222 47% 11%;
     
-    /* Dental Blue - Primary Brand Color */
-    --primary: 224 76% 48%;
+    /* Enhanced Dental Blue - Primary Brand Color */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 76% 65%;
-    --primary-dark: 224 76% 35%;
+    --primary-light: 217 91% 75%;
+    --primary-dark: 217 91% 45%;
+    --primary-glow: 217 91% 85%;
     
-    /* Medical Red - Accent Color */
-    --accent-red: 348 83% 47%;
-    --accent-red-light: 348 83% 60%;
-    --accent-red-dark: 348 83% 35%;
+    /* Premium Medical Red - Accent Color */
+    --accent-red: 0 84% 60%;
+    --accent-red-light: 0 84% 75%;
+    --accent-red-dark: 0 84% 45%;
     
-    /* Clean Whites and Grays */
+    /* Sophisticated Neutrals */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
     
-    --secondary: 220 13% 91%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 23% 95%;
+    --secondary-foreground: 222 47% 11%;
     
-    --muted: 220 13% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 23% 98%;
+    --muted-foreground: 215 25% 27%;
     
-    --accent: 220 13% 91%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 23% 95%;
+    --accent-foreground: 222 47% 11%;
     
-    /* Medical Trust Colors */
+    /* Professional Trust Colors */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
     
-    --warning: 45 93% 47%;
+    --warning: 32 95% 44%;
     --warning-foreground: 0 0% 100%;
     
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
     
     /* UI Elements */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 76% 48%;
+    --border: 220 23% 90%;
+    --input: 220 23% 95%;
+    --ring: 217 91% 60%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
     
-    /* Design System Enhancements */
-    --radius: 0.75rem;
+    /* Modern Design Enhancements */
+    --radius: 1rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.5rem;
     
-    /* Gradients */
+    /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent-red)), hsl(var(--accent-red-light)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 23% 99%));
+    --gradient-mesh: conic-gradient(from 230.29deg at 51.63% 52.16%, hsl(var(--primary)) 0deg, hsl(var(--primary-light)) 67.5deg, hsl(var(--primary-glow)) 198.75deg, hsl(var(--primary)) 251.25deg, hsl(var(--primary-dark)) 301.88deg, hsl(var(--primary)) 360deg);
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.1), 0 10px 10px -5px hsl(var(--primary) / 0.04);
+    /* Elevated Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(var(--primary) / 0.06);
+    --shadow-md: 0 4px 12px -2px hsl(var(--primary) / 0.12), 0 2px 8px -2px hsl(var(--primary) / 0.08);
+    --shadow-lg: 0 12px 32px -8px hsl(var(--primary) / 0.18), 0 8px 24px -8px hsl(var(--primary) / 0.12);
+    --shadow-xl: 0 24px 64px -12px hsl(var(--primary) / 0.25), 0 16px 48px -16px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 48px hsl(var(--primary-glow) / 0.6);
+    --shadow-card: 0 8px 24px -4px hsl(220 23% 15% / 0.08), 0 4px 12px -4px hsl(220 23% 15% / 0.05);
     
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Smooth Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -132,6 +140,76 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Enhanced Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+    font-weight: 700;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-7 text-muted-foreground;
+  }
+
+  /* Premium Interactive Elements */
+  .btn-hover-lift {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-card hover:-translate-y-2;
+  }
+
+  .text-shimmer {
+    background: linear-gradient(110deg, hsl(var(--foreground)) 45%, hsl(var(--primary)) 55%, hsl(var(--foreground)) 65%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply backdrop-blur-xl bg-white/80 border border-white/20;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-primary/10 border border-primary/20;
+  }
+
+  /* Scroll Enhancements */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus States */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 }

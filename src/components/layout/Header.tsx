@@ -50,32 +50,32 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2 px-4">
+      <div className="bg-gradient-primary text-primary-foreground py-3 px-4 shadow-custom-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2 font-medium">
               <Phone className="h-4 w-4" />
               <span>0333 4855247</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 font-medium">
               <MapPin className="h-4 w-4" />
               <span>Panorama Center, Rawalpindi</span>
             </div>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <span>Follow Us:</span>
+            <span className="font-medium">Follow Us:</span>
             {/* Social icons would go here */}
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className="bg-white shadow-custom-md sticky top-0 z-50">
+      <header className="bg-white/95 backdrop-blur-xl shadow-card sticky top-0 z-50 border-b border-border/50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
+            <Link to="/" className="flex items-center transition-spring hover:scale-105">
+              <div className="text-3xl font-bold text-primary tracking-tight">
                 DENTAL LAND
               </div>
             </Link>
@@ -97,13 +97,13 @@ export function Header() {
                         {item.name}
                         <ChevronDown className="h-4 w-4" />
                       </button>
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-white shadow-custom-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-smooth z-50">
-                        <div className="py-2">
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-xl shadow-card rounded-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-spring z-50">
+                        <div className="py-3">
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-smooth"
+                              className="block px-6 py-3 text-sm font-medium text-foreground hover:bg-primary/5 hover:text-primary transition-spring rounded-lg mx-2"
                             >
                               {subItem.name}
                             </Link>
@@ -130,7 +130,7 @@ export function Header() {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Button variant="appointment" asChild>
+              <Button variant="appointment" size="lg" asChild>
                 <a href="tel:03334855247">Call For Appointment</a>
               </Button>
             </div>
@@ -154,7 +154,7 @@ export function Header() {
           {/* Mobile menu */}
           {mobileMenuOpen && (
             <div className="lg:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
+              <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-xl border-t border-border/20">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.submenu ? (
